@@ -1,0 +1,904 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swastha Pad – Har Mahine ki Saheli</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #ffe6f0;
+            color: #5a2a42;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(to right, #ffb6c1, #ffd6e8);
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        header h2 {
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        .flowers {
+            font-size: 32px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .slideshow {
+            width: 100%;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            background: #fff0f6;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .slide.active {
+            display: flex;
+            animation: fade 1.5s;
+        }
+
+        @keyframes fade {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .content {
+            padding: 50px 20px;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .button {
+            margin-top: 30px;
+        }
+
+        .button a {
+            background: #ff69b4;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .button a:hover {
+            background: #ff1493;
+        }
+
+        footer {
+            background: #ffd6e8;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .emoji {
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="flowers">🌸 🌼 🌷 🌺</div>
+    <h1>Swastha Pad</h1>
+    <h2>Har Mahine ki Saheli</h2>
+    <div class="flowers">🌸 🌼 🌷 🌺</div>
+</header>
+
+<!-- Slideshow Section -->
+<div class="slideshow">
+    <div class="slide active">
+        💗 Hello & Welcome 💗<br>
+        Your journey to gentle care begins here 🌸
+    </div>
+    <div class="slide">
+        🩷 Listen to your body<br>
+        Because every feeling matters 🤍
+    </div>
+    <div class="slide">
+        🌿 Eco-Friendly • Safe • Soft 🌿<br>
+        Care you can trust 🩹
+    </div>
+    <div class="slide">
+        🌸 Swastha Pad 🌸<br>
+        Your monthly companion 🩷
+    </div>
+</div>
+
+<!-- Main Content -->
+<section class="content">
+    <p>
+        Hello and welcome 🌷  
+        This platform helps you listen to your body, understand your needs,
+        and find gentle, personalized solutions rooted in care and trust.
+        <br><br>
+        At <strong>Swastha Pad</strong>, we believe menstruation should feel safe,
+        comfortable, and natural. Our eco-friendly sanitary napkins are designed
+        with love for your body and the environment 🌍💖
+    </p>
+
+    <p class="emoji">
+        🌸 🩷 🩹 🌿 🌼
+    </p>
+
+    <div class="button">
+        <a href="#">Let’s Begin Your Consultation →</a>
+    </div>
+</section>
+
+<footer>
+    Made with 💖 for Women | Swastha Pad – Har Mahine ki Saheli
+</footer>
+
+<!-- JavaScript for Slideshow -->
+<script>
+    let slides = document.querySelectorAll('.slide');
+    let index = 0;
+
+    setInterval(() => {
+        slides[index].classList.remove('active');
+        index = (index + 1) % slides.length;
+        slides[index].classList.add('active');
+    }, 3000);
+</script>
+
+</body>
+</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swastha Pad – Consultation</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #ffe6f0;
+            color: #5a2a42;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+
+        .step {
+            display: none;
+            background: #fff0f6;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
+        }
+
+        .step.active {
+            display: block;
+        }
+
+        .options label {
+            display: block;
+            background: #ffe6f0;
+            margin: 10px 0;
+            padding: 12px 15px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .options label:hover {
+            background: #ffb6c1;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .duration-box {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .duration-box input,
+        .duration-box select {
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid #ffb6c1;
+            font-size: 16px;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        button {
+            background: #ff69b4;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #ff1493;
+        }
+
+        .emoji {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Swastha Pad</h1>
+    <h2>Har Mahine ki Saheli 🌸</h2>
+
+    <!-- STEP 1 -->
+    <div class="step active" id="step1">
+        <div class="emoji">🩷 🌸 🩹</div>
+        <h3>Please select ONE issue you are facing</h3>
+
+        <div class="options">
+            <label><input type="radio" name="issue"> Menstrual Cramps</label>
+            <label><input type="radio" name="issue"> PCOD / PCOS</label>
+            <label><input type="radio" name="issue"> Irregular Periods</label>
+            <label><input type="radio" name="issue"> Delayed Periods</label>
+            <label><input type="radio" name="issue"> Heavy Menstrual Bleeding</label>
+            <label><input type="radio" name="issue"> Scanty or Light Period Flow</label>
+            <label><input type="radio" name="issue"> Painful Periods (Dysmenorrhea)</label>
+            <label><input type="radio" name="issue"> Clotting During Periods</label>
+            <label><input type="radio" name="issue"> Spotting Between Periods</label>
+            <label><input type="radio" name="issue"> Missed Periods</label>
+            <label><input type="radio" name="issue"> Short Menstrual Cycle</label>
+            <label><input type="radio" name="issue"> Long Menstrual Cycle</label>
+            <label><input type="radio" name="issue"> Hormonal Menstrual Imbalance</label>
+            <label><input type="radio" name="issue"> Premenstrual Syndrome (PMS)</label>
+            <label><input type="radio" name="issue"> Prolonged Periods</label>
+        </div>
+
+        <div class="navigation">
+            <button disabled>⬅ Back</button>
+            <button onclick="nextStep()">Next ➡</button>
+        </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step" id="step2">
+        <div class="emoji">🌿 🩷 🌸</div>
+        <h3>How long have you been experiencing this issue?</h3>
+
+        <div class="duration-box">
+            <input type="number" min="1" placeholder="Enter number (e.g. 2)">
+            <select>
+                <option>Days</option>
+                <option>Weeks</option>
+                <option>Months</option>
+                <option>Years</option>
+            </select>
+        </div>
+
+        <div class="navigation">
+            <button onclick="prevStep()">⬅ Back</button>
+            <button>Next ➡</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function nextStep() {
+        document.getElementById('step1').classList.remove('active');
+        document.getElementById('step2').classList.add('active');
+    }
+
+    function prevStep() {
+        document.getElementById('step2').classList.remove('active');
+        document.getElementById('step1').classList.add('active');
+    }
+</script>
+
+</body>
+</html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Swastha Pad – Har Mahine ki Saheli</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    font-family:Poppins,sans-serif;
+    background:#ffe6f0;
+    color:#5a2a42;
+}
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:30px;
+}
+.page{
+    display:none;
+    background:#fff0f6;
+    padding:30px;
+    border-radius:20px;
+}
+.page.active{display:block;}
+h1,h2,h3{text-align:center;}
+button{
+    background:#ff69b4;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:25px;
+    font-size:16px;
+    cursor:pointer;
+}
+button:hover{background:#ff1493;}
+.nav{
+    display:flex;
+    justify-content:space-between;
+    margin-top:30px;
+}
+.option{
+    background:#ffe6f0;
+    padding:12px;
+    margin:8px 0;
+    border-radius:12px;
+}
+select,input{
+    padding:10px;
+    border-radius:10px;
+    border:1px solid #ffb6c1;
+}
+.lang{
+    text-align:right;
+    margin-bottom:10px;
+}
+.summary{
+    background:#ffe6f0;
+    padding:20px;
+    border-radius:15px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<!-- LANGUAGE SELECT -->
+<div class="lang">
+<select onchange="changeLanguage(this.value)">
+<option value="en">English</option>
+<option value="hi">हिंदी</option>
+<option value="mr">मराठी</option>
+</select>
+</div>
+
+<!-- PAGE 1 : WELCOME -->
+<div class="page active" id="page1">
+<h1 id="w_title">Welcome to Swastha Pad 🌸</h1>
+<p id="w_text" style="text-align:center">
+This platform helps you listen to your body, understand your needs, and find gentle, personalized solutions rooted in care and trust.
+</p>
+<div class="nav">
+<span></span>
+<button onclick="next(2)">Let’s Begin</button>
+</div>
+</div>
+
+<!-- PAGE 2 : ISSUE -->
+<div class="page" id="page2">
+<h2 id="i_title">Select the issue you are facing</h2>
+<div id="issues"></div>
+<div class="nav">
+<button onclick="next(1)">Back</button>
+<button onclick="saveIssue()">Next</button>
+</div>
+</div>
+
+<!-- PAGE 3 : DURATION -->
+<div class="page" id="page3">
+<h2 id="d_title">How long have you been experiencing this?</h2>
+<input type="number" id="durationNumber" placeholder="Enter number">
+<select id="durationUnit">
+<option>Days</option>
+<option>Weeks</option>
+<option>Months</option>
+<option>Years</option>
+</select>
+<div class="nav">
+<button onclick="next(2)">Back</button>
+<button onclick="next(4)">Next</button>
+</div>
+</div>
+
+<!-- PAGE 4 : MEANING -->
+<div class="page" id="page4">
+<h2 id="m_title">Understanding your concern</h2>
+<p id="meaningText"></p>
+<div class="nav">
+<button onclick="next(3)">Back</button>
+<button onclick="next(5)">Next</button>
+</div>
+</div>
+
+<!-- PAGE 5 : CONSULTANT -->
+<div class="page" id="page5">
+<h2 id="c_title">Natural Consultant Guide 🌿</h2>
+<h4>Do ✅</h4>
+<p id="doText"></p>
+<h4>Don’t ❌</h4>
+<p id="dontText"></p>
+<h4>Result 🌼</h4>
+<p id="resultText"></p>
+<div class="nav">
+<button onclick="next(4)">Back</button>
+<button onclick="next(6)">Next</button>
+</div>
+</div>
+
+<!-- PAGE 6 : SUMMARY -->
+<div class="page" id="page6">
+<h2>Summary & Care Note 💖</h2>
+<div class="summary">
+<p><b>Issue:</b> <span id="s_issue"></span></p>
+<p><b>Duration:</b> <span id="s_duration"></span></p>
+<p><b>Meaning:</b> <span id="s_meaning"></span></p>
+</div>
+<p style="text-align:center;margin-top:20px">
+Thank you for visiting Swastha Pad 🌸  
+We believe gentle care and awareness can bring long-term menstrual well-being.
+</p>
+<div class="nav">
+<button onclick="restart()">Start Over</button>
+<span></span>
+</div>
+</div>
+
+</div>
+
+<script>
+let selectedIssue="";
+let lang="en";
+
+const data={
+en:{
+issues:[
+"Menstrual Cramps","PCOD / PCOS","Irregular Periods","Delayed Periods","Heavy Menstrual Bleeding",
+"Light Period Flow","Painful Periods","Blood Clots","Spotting","Missed Periods",
+"Short Cycle","Long Cycle","Hormonal Imbalance","PMS","Prolonged Periods"
+],
+meanings:{
+"Menstrual Cramps":"Pain in the lower abdomen during periods.",
+"PCOD / PCOS":"A hormonal condition affecting ovaries and periods.",
+"Irregular Periods":"Periods not coming on a fixed date every month.",
+"Delayed Periods":"Periods coming later than the usual cycle.",
+"Heavy Menstrual Bleeding":"Excessive bleeding requiring frequent pad changes.",
+"Light Period Flow":"Very little bleeding during periods.",
+"Painful Periods":"Severe pain affecting daily routine.",
+"Blood Clots":"Passing thick blood clots during menstruation.",
+"Spotting":"Light bleeding between cycles.",
+"Missed Periods":"Periods not coming for one or more months.",
+"Short Cycle":"Periods coming too frequently.",
+"Long Cycle":"Long gap between periods.",
+"Hormonal Imbalance":"Hormonal changes affecting cycle.",
+"PMS":"Physical or emotional changes before periods.",
+"Prolonged Periods":"Periods lasting more than normal days."
+}
+},
+hi:{
+issues:[
+"मासिक धर्म में दर्द","पीसीओडी / पीसीओएस","अनियमित पीरियड्स","देरी से पीरियड्स","अधिक रक्तस्राव",
+"कम फ्लो","दर्दनाक पीरियड्स","खून के थक्के","स्पॉटिंग","पीरियड मिस होना",
+"छोटा चक्र","लंबा चक्र","हार्मोन असंतुलन","पीएमएस","लंबे समय तक पीरियड्स"
+]
+},
+mr:{
+issues:[
+"मासिक पाळीतील वेदना","PCOD / PCOS","अनियमित पाळी","उशिरा पाळी","जास्त रक्तस्राव",
+"कमी फ्लो","तीव्र वेदना","गाठी","स्पॉटिंग","पाळी न येणे",
+"लहान सायकल","मोठी सायकल","हार्मोन असंतुलन","PMS","लांबलेली पाळी"
+]
+}
+};
+
+function loadIssues(){
+let box=document.getElementById("issues");
+box.innerHTML="";
+data[lang].issues.forEach(i=>{
+box.innerHTML+=`<div class="option">
+<input type="radio" name="issue" value="${i}" onchange="selectedIssue=this.value"> ${i}
+</div>`;
+});
+}
+
+function saveIssue(){
+if(!selectedIssue){alert("Please select one issue");return;}
+document.getElementById("meaningText").innerText=data.en.meanings[selectedIssue];
+document.getElementById("doText").innerText="Follow a gentle routine and support your body naturally.";
+document.getElementById("dontText").innerText="Avoid stress, junk food, and irregular habits.";
+document.getElementById("resultText").innerText="Consistency helps improve menstrual balance.";
+next(3);
+}
+
+function next(n){
+document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
+document.getElementById("page"+n).classList.add("active");
+
+if(n===6){
+document.getElementById("s_issue").innerText=selectedIssue;
+document.getElementById("s_duration").innerText=
+document.getElementById("durationNumber").value+" "+
+document.getElementById("durationUnit").value;
+document.getElementById("s_meaning").innerText=
+data.en.meanings[selectedIssue];
+}
+}
+
+function restart(){
+location.reload();
+}
+
+function changeLanguage(l){
+lang=l;
+loadIssues();
+}
+
+loadIssues();
+</script>
+
+</body>
+</html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Swastha Pad – Har Mahine ki Saheli</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    font-family:Poppins,sans-serif;
+    background:#ffe6f0;
+    color:#5a2a42;
+    transition:0.5s;
+}
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:25px;
+}
+.page{
+    display:none;
+    background:#fff0f6;
+    padding:30px;
+    border-radius:25px;
+    animation:fade 0.8s;
+}
+.page.active{display:block;}
+@keyframes fade{
+    from{opacity:0; transform:translateY(15px);}
+    to{opacity:1; transform:translateY(0);}
+}
+h1,h2,h3{text-align:center;}
+p{text-align:center; line-height:1.8;}
+button{
+    background:#ff69b4;
+    color:white;
+    border:none;
+    padding:12px 28px;
+    border-radius:30px;
+    font-size:16px;
+    cursor:pointer;
+}
+button:hover{background:#ff1493;}
+.nav{
+    display:flex;
+    justify-content:space-between;
+    margin-top:30px;
+}
+.option{
+    background:#ffe6f0;
+    padding:14px;
+    margin:10px 0;
+    border-radius:15px;
+}
+select,input{
+    padding:10px;
+    border-radius:12px;
+    border:1px solid #ffb6c1;
+}
+.lang{
+    text-align:right;
+    margin-bottom:15px;
+}
+.emoji{
+    font-size:28px;
+    text-align:center;
+}
+.slideshow{
+    animation:slide 6s infinite;
+}
+@keyframes slide{
+    0%{opacity:0.3;}
+    50%{opacity:1;}
+    100%{opacity:0.3;}
+}
+.summary{
+    background:#ffe6f0;
+    padding:20px;
+    border-radius:20px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<!-- LANGUAGE -->
+<div class="lang">
+<select onchange="setLang(this.value)">
+<option value="en">English</option>
+<option value="hi">हिंदी</option>
+<option value="mr">मराठी</option>
+</select>
+</div>
+
+<!-- PAGE 1 -->
+<div class="page active" id="p1">
+<div class="emoji slideshow">🌸 🩷 🩹 🌸</div>
+<h1 id="t1"></h1>
+<p id="t2"></p>
+<div class="nav">
+<span></span>
+<button onclick="go(2)">Next ➡</button>
+</div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="p2">
+<h2 id="t3"></h2>
+<div id="issueList"></div>
+<div class="nav">
+<button onclick="go(1)">⬅ Back</button>
+<button onclick="saveIssue()">Next ➡</button>
+</div>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="p3">
+<h2 id="t4"></h2>
+<input type="number" id="num" placeholder="2">
+<select id="unit"></select>
+<div class="nav">
+<button onclick="go(2)">⬅ Back</button>
+<button onclick="go(4)">Next ➡</button>
+</div>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="p4">
+<h2 id="t5"></h2>
+<p id="meaning"></p>
+<div class="nav">
+<button onclick="go(3)">⬅ Back</button>
+<button onclick="go(5)">Next ➡</button>
+</div>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page" id="p5">
+<h2 id="t6"></h2>
+<h4>Do ✅</h4>
+<p id="do"></p>
+<h4>Don’t ❌</h4>
+<p id="dont"></p>
+<h4>Result 🌼</h4>
+<p id="result"></p>
+<div class="nav">
+<button onclick="go(4)">⬅ Back</button>
+<button onclick="go(6)">Next ➡</button>
+</div>
+</div>
+
+<!-- PAGE 6 -->
+<div class="page" id="p6">
+<div class="emoji">🌸 🩷 🩹 🌸</div>
+<h2 id="t7"></h2>
+<div class="summary">
+<p><b id="s1"></b> <span id="sumIssue"></span></p>
+<p><b id="s2"></b> <span id="sumDur"></span></p>
+<p><b id="s3"></b> <span id="sumMean"></span></p>
+</div>
+<p id="thank"></p>
+<div class="nav">
+<button onclick="restart()">🔄 Start Over</button>
+<span></span>
+</div>
+</div>
+
+</div>
+
+<script>
+let lang="en", issue="";
+
+const text={
+en:{
+welcome:"Welcome to Swastha Pad 🌸",
+intro:"This platform helps you listen to your body and choose gentle menstrual care.",
+selectIssue:"Select one issue you are facing",
+duration:"How long have you been experiencing this?",
+understand:"Understanding your concern",
+guide:"Natural Consultant Guide 🌿",
+summary:"Your Care Summary 💖",
+i:"Issue:", d:"Duration:", m:"Meaning:",
+thanks:"Thank you for visiting Swastha Pad 🌸 We believe gentle care creates long-term wellness.",
+units:["Days","Weeks","Months","Years"],
+issues:[
+"Menstrual Cramps","PCOD / PCOS","Irregular Periods","Delayed Periods",
+"Heavy Menstrual Bleeding","Light Period Flow","Painful Periods",
+"Blood Clots","Spotting","Missed Periods","Short Cycle",
+"Long Cycle","Hormonal Imbalance","PMS","Prolonged Periods"
+],
+meaning:{
+"Menstrual Cramps":"Pain in the lower abdomen during periods.",
+"PCOD / PCOS":"A hormonal condition affecting ovaries and periods.",
+"Irregular Periods":"Periods not coming on fixed dates.",
+"Delayed Periods":"Periods arriving later than usual.",
+"Heavy Menstrual Bleeding":"Excessive bleeding during periods.",
+"Light Period Flow":"Very little bleeding during periods.",
+"Painful Periods":"Severe pain affecting daily routine.",
+"Blood Clots":"Passing thick blood clots.",
+"Spotting":"Light bleeding between cycles.",
+"Missed Periods":"Periods absent for months.",
+"Short Cycle":"Periods coming too frequently.",
+"Long Cycle":"Long gap between periods.",
+"Hormonal Imbalance":"Hormonal disturbance affecting cycle.",
+"PMS":"Physical or emotional changes before periods.",
+"Prolonged Periods":"Periods lasting more than normal days."
+}
+},
+hi:{
+welcome:"स्वस्थ पैड में आपका स्वागत है 🌸",
+intro:"यह मंच आपको अपने शरीर को समझने में मदद करता है।",
+selectIssue:"आप जिस समस्या का सामना कर रही हैं उसे चुनें",
+duration:"आप कब से यह समस्या महसूस कर रही हैं?",
+understand:"समस्या को समझें",
+guide:"प्राकृतिक सलाह 🌿",
+summary:"आपकी जानकारी 💖",
+i:"समस्या:", d:"अवधि:", m:"अर्थ:",
+thanks:"स्वस्थ पैड पर आने के लिए धन्यवाद 🌸",
+units:["दिन","सप्ताह","महीने","साल"],
+issues:["मासिक दर्द","PCOD / PCOS","अनियमित पीरियड्स","देरी से पीरियड्स","अधिक रक्तस्राव","कम फ्लो","दर्दनाक पीरियड्स","थक्के","स्पॉटिंग","पीरियड मिस","छोटा चक्र","लंबा चक्र","हार्मोन असंतुलन","PMS","लंबे पीरियड्स"]
+},
+mr:{
+welcome:"स्वस्थ पॅडमध्ये आपले स्वागत आहे 🌸",
+intro:"हा मंच तुम्हाला शरीर समजून घेण्यास मदत करतो.",
+selectIssue:"तुमची समस्या निवडा",
+duration:"ही समस्या किती काळापासून आहे?",
+understand:"समस्या समजून घ्या",
+guide:"नैसर्गिक सल्ला 🌿",
+summary:"तुमची माहिती 💖",
+i:"समस्या:", d:"कालावधी:", m:"अर्थ:",
+thanks:"स्वस्थ पॅडला भेट दिल्याबद्दल धन्यवाद 🌸",
+units:["दिवस","आठवडे","महिने","वर्षे"],
+issues:["मासिक वेदना","PCOD / PCOS","अनियमित पाळी","उशीर","जास्त रक्तस्राव","कमी फ्लो","तीव्र वेदना","गाठी","स्पॉटिंग","पाळी चुकणे","लहान सायकल","मोठी सायकल","हार्मोन असंतुलन","PMS","लांबलेली पाळी"]
+}
+};
+
+function load(){
+document.getElementById("t1").innerText=text[lang].welcome;
+document.getElementById("t2").innerText=text[lang].intro;
+document.getElementById("t3").innerText=text[lang].selectIssue;
+document.getElementById("t4").innerText=text[lang].duration;
+document.getElementById("t5").innerText=text[lang].understand;
+document.getElementById("t6").innerText=text[lang].guide;
+document.getElementById("t7").innerText=text[lang].summary;
+document.getElementById("s1").innerText=text[lang].i;
+document.getElementById("s2").innerText=text[lang].d;
+document.getElementById("s3").innerText=text[lang].m;
+document.getElementById("thank").innerText=text[lang].thanks;
+
+let ul=document.getElementById("issueList"); ul.innerHTML="";
+text[lang].issues.forEach(i=>{
+ul.innerHTML+=`<div class="option">
+<input type="radio" name="iss" value="${i}" onchange="issue=this.value"> ${i}
+</div>`;
+});
+
+let u=document.getElementById("unit"); u.innerHTML="";
+text[lang].units.forEach(x=>u.innerHTML+=`<option>${x}</option>`);
+}
+
+function saveIssue(){
+if(!issue){alert("Please select one issue");return;}
+document.getElementById("meaning").innerText=text.en.meaning[issue] || "";
+document.getElementById("do").innerText="Follow gentle routine and care.";
+document.getElementById("dont").innerText="Avoid stress and junk food.";
+document.getElementById("result").innerText="Consistency improves menstrual health.";
+go(3);
+}
+
+function go(n){
+document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
+document.getElementById("p"+n).classList.add("active");
+if(n===6){
+document.getElementById("sumIssue").innerText=issue;
+document.getElementById("sumDur").innerText=
+document.getElementById("num").value+" "+document.getElementById("unit").value;
+document.getElementById("sumMean").innerText=document.getElementById("meaning").innerText;
+}
+}
+
+function restart(){location.reload();}
+function setLang(l){lang=l; load();}
+load();
+</script>
+
+</body>
+</html>
